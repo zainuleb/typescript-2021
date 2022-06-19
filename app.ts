@@ -1,9 +1,14 @@
-function add(n1: number, n2: number) {
+//Return Number
+function add(n1: number, n2: number): number {
   return n1 + n2;
 }
 
-function printResults(num: number): void {
-  console.log(`Result: ${num}`);
+//Return String
+function addStr(n1: number, n2: number): string {
+  return n1.toString + n2.toString;
 }
 
-printResults(add(5, 12));
+//Return Void/undefined
+function addVoid(n1: number, n2: number): void {
+  console.log(n1, n2);
+}
