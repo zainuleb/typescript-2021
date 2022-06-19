@@ -8,7 +8,13 @@ function addStr(n1: number, n2: number): string {
   return n1.toString + n2.toString;
 }
 
-//Return Void/undefined
+//Return Void
 function addVoid(n1: number, n2: number): void {
   console.log(n1, n2);
+}
+
+//Return Undefined
+function addUndefined(n1: number, n2: number): undefined {
+  console.log(n1, n2);
+  return;
 }
