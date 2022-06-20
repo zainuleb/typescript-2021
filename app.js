@@ -1,15 +1,9 @@
-//Return Number
-function add(n1, n2) {
-    return n1 + n2;
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
 }
-//Return add String
-function addStr(n1, n2) {
-    return n1 + n2;
+function generateError(msg, code) {
+    throw { msg: msg, statusCode: code };
 }
-var tempAdd;
-tempAdd = add;
-var tempAdd2;
-tempAdd2 = add;
-/* tempAdd2 = addStr; */ //Error Here
-//Driver Codes
-console.log(tempAdd(10, 20));
+var result = generateError('An error occurred!', 500);
+console.log(result);
