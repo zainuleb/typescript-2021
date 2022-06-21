@@ -1,7 +1,7 @@
 "use strict";
 class Department {
-    constructor(name) {
-        this.name = name;
+    constructor(n) {
+        this.name = n;
     }
     describe() {
         console.log('Department ' + this.name);
@@ -9,5 +9,5 @@ class Department {
 }
 const acc = new Department('IT');
 acc.describe();
-const accCpy = { describe: acc.describe };
+const accCpy = { name: 'SEE', describe: acc.describe };
 accCpy.describe();
