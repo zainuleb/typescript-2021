@@ -1,11 +1,15 @@
-'use strict';
-
-var Department = (function () {
-  function Department(n) {
-    this.name = n;
+class Department {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
   }
-  return Department;
-})();
 
-var acc = new Department('Accounting');
-console.log(acc.name);
+  describe() {
+    console.log('Department ' + this.name);
+  }
+}
+
+const acc = new Department('IT');
+acc.describe();
+const accCpy = { describe: acc.describe };
+accCpy.describe();
