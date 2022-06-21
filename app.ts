@@ -1,9 +1,11 @@
-class Department {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-}
+'use strict';
 
-const acc = new Department('IT');
-console.log(acc);
+var Department = (function () {
+  function Department(n) {
+    this.name = n;
+  }
+  return Department;
+})();
+
+var acc = new Department('Accounting');
+console.log(acc.name);
