@@ -1,8 +1,11 @@
 "use strict";
 class Department {
-    constructor(n) {
-        this.employee = [];
-        this.name = n;
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+        /*   private id:string;
+        private name: string;
+       */ this.employee = [];
     }
     describe() {
         console.log('Department ' + this.name);
@@ -15,7 +18,8 @@ class Department {
         console.log(this.employee);
     }
 }
-const acc = new Department('IT');
+const acc = new Department('1', 'IT');
 acc.addEmployee('Max');
 acc.addEmployee('Manu');
+console.log(acc.name);
 acc.printEmployeeInformation();
