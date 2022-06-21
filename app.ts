@@ -1,11 +1,9 @@
-function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
-  const result = n1 + n2;
-  cb(result);
+class Department {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
 }
 
-function generateError(msg: string, code: number): never {
-  throw { msg: msg, statusCode: code };
-}
-
-const result = generateError('An error occurred!', 500);
-console.log(result);
+const acc = new Department('IT');
+console.log(acc);
