@@ -3,9 +3,7 @@ class Department {
     constructor(id, name) {
         this.id = id;
         this.name = name;
-        /*   private id:string;
-        private name: string;
-       */ this.employee = [];
+        this.employee = [];
     }
     describe() {
         console.log('Department ' + this.name);
@@ -18,8 +16,14 @@ class Department {
         console.log(this.employee);
     }
 }
-const acc = new Department('1', 'IT');
-acc.addEmployee('Max');
-acc.addEmployee('Manu');
-console.log(acc.name);
-acc.printEmployeeInformation();
+//Extending Classes
+class ITDepartment extends Department {
+    constructor(id, admins) {
+        super(id, 'IT');
+        this.admins = admins;
+    }
+}
+const it = new ITDepartment('1', ['max', 'mannn']);
+it.addEmployee('Max');
+it.addEmployee('Manu');
+console.log(it);
