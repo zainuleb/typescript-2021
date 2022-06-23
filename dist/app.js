@@ -4,9 +4,11 @@ class Department {
         this.id = id;
         this.name = name;
         this.employee = [];
+        console.log(this.fiscalYear);
     }
-    describe() {
+    static describe() {
         console.log('Department ' + this.name);
+        console.log('fiscalYear ' + this.fiscalYear);
     }
     addEmployee(employee) {
         this.employee.push(employee);
@@ -16,14 +18,17 @@ class Department {
         console.log(this.employee);
     }
 }
+Department.fiscalYear = 2020;
 //Extending Classes
 class ITDepartment extends Department {
     constructor(id, admins) {
         super(id, 'IT');
         this.admins = admins;
+        this.lastAdmin = admins[0];
+    }
+    static createEmployee(name) {
+        return { name: name };
     }
 }
-const it = new ITDepartment('1', ['max', 'mannn']);
-it.addEmployee('Max');
-it.addEmployee('Manu');
-console.log(it);
+const emp1 = ITDepartment.createEmployee('Max');
+console.log(emp1);
