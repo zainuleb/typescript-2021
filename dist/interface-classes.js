@@ -10,4 +10,5 @@ class Banda {
     }
 }
 const adam = new Banda('Adam', '1099');
+adam.naam = 'Adama';
 adam.salam('Aapka jumla');
