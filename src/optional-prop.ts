@@ -8,7 +8,8 @@ jama = (n1: number, n2: number) => {
 };
 
 interface Laqab {
-  readonly name: string;
+  readonly name?: string;
+  outputName?: string;
 }
 
 interface Greetable extends Laqab {
@@ -16,14 +17,18 @@ interface Greetable extends Laqab {
 }
 
 class Insaan implements Greetable {
-  name: string;
+  name?: string;
   age: number = 30;
 
-  constructor(n: string) {
-    this.name = n;
+  constructor(n?: string) {
+    if (n) this.name = n;
   }
 
   greet(jumla: string) {
     console.log(jumla);
   }
 }
+
+let ismael: Greetable;
+
+ismael = new Insaan();
