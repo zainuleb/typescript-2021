@@ -1,3 +1,12 @@
+interface jamaFoo {
+  (a: number, b: number): number;
+}
+let jama: jamaFoo;
+
+jama = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+
 interface Laqab {
   readonly name: string;
 }
