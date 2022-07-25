@@ -1,6 +1,6 @@
 "use strict";
-const e1 = {
+const el = {
     name: 'Max',
-    privilege: ['create-server', 'delete-server'],
+    privelleges: ['create-server'],
     startDate: new Date(),
 };

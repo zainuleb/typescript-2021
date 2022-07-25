@@ -1,17 +1,22 @@
-interface Admin {
+type Admin = {
   name: string;
-  privilege: string[];
-}
+  privelleges: string[];
+};
 
-interface Employee {
+type Employee = {
   name: string;
   startDate: Date;
-}
+};
 
-interface ElevatedEmployee extends Employee, Admin {}
+type ElevatedEmployee = Admin & Employee;
 
-const e1: ElevatedEmployee = {
+const el: ElevatedEmployee = {
   name: 'Max',
-  privilege: ['create-server', 'delete-server'],
+  privelleges: ['create-server'],
   startDate: new Date(),
 };
+
+type Combinable = string | number;
+type Numeric = number | boolean;
+
+type Universal = Combinable & Numeric;
